@@ -2,10 +2,10 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Project title\>
+# Calorie Tracker App
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
+ > Authors: [Ethan Quach](https://github.com/equac010), Daniel(https://github.com/), Edward Song(https://github.com/), Vincent(https://github.com/), Dao Lin(https://github.com/)
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
@@ -25,6 +25,13 @@
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
+
+ Project Description:
+ As more and more people start to get into fitness, the necessity for free apps tracking calories and giving input depending on what they're eating increases. Our app will be able to create comprehenesive workout plans as well as be able to track a person's calorie intake and outtake. Currently, the plan is to use C++, but potential HTML might be used in order to create a website as well. 
+ The input of our project is going to be constantly increasing, but currently the user's current ideal weight, time alloted per workout session, what they're eating, etc. 
+ The output of our project will be workout plans, recommended food plans, the calorie intake/outtake, etc.
+ The project will be able to create plans bassed on what the user desires. It will be able to calculate and create a workout and food plan depending on the amount of hours that a user inputed, the amount of calories burned, as well as being able to take equipment into account.  
+
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
