@@ -1,36 +1,18 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9890085&assignment_repo_type=AssignmentRepo)
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Calorie Tracker App
- > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: [Ethan Quach](https://github.com/equac010), Daniel(https://github.com/), Edward Song(https://github.com/), Vincent(https://github.com/), [Dao Lin](https://github.com/DaDanielL)
-
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
-
- > ## Expectations
- > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * **Each member of the group must actively participate in the Github Project board, writing unit tests, and reviewing commited code.**
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
+#### Authors: [Ethan Quach](https://github.com/equac010), Daniel Sadeghi (https://github.com/), Edward Song (https://github.com/), Vincent (https://github.com/), [Dao Lin](https://github.com/DaDanielL)
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- > * What will be the input/output of your project?
- > * What are the features that the project provides?
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
- > 
- > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
 
- Project Description:
- As more and more people start to get into fitness, the necessity for free apps tracking calories and giving input depending on what they're eating increases. Our app will be able to create comprehenesive workout plans as well as be able to track a person's calorie intake and outtake. Currently, the plan is to use C++, but potential HTML might be used in order to create a website as well. 
- The input of our project is going to be constantly increasing, but currently the user's current ideal weight, time alloted per workout session, what they're eating, etc. 
- The output of our project will be workout plans, recommended food plans, the calorie intake/outtake, etc.
- The project will be able to create plans bassed on what the user desires. It will be able to calculate and create a workout and food plan depending on the amount of hours that a user inputed, the amount of calories burned, as well as being able to take equipment into account.  
+As more and more people start to get into fitness, the necessity for free calorie tracking apps increases. More importantly, while many people are wary about their dietary health, the time it takes to track your calories and nutrition deters many from consistently recording their intake and maintaining a healthy diet. We aim for our app to streamline the meal planning and calorie tracking process to encourage our users to upkeep their dietary health without taking too much of their daily time and effort. We plan to do so through features such as a record of all the user's previously logged food. 
+
+We aim to create a web application using the React framework (HTML/CSS/Javascript) for frontend and C++ for backend. Therefore, our application will have an user-friendly interface for our users to interact with it easily and efficiently.
+
+Obviously, our application need input from the user of the food they ate and its nutritional fact (input) in order to show the user their current daily caloric and nutritional intake (output). Our app will take in users' login credentials (input) to give them access to their account where they will find their dietary history, food record, physical conditions, and other personal informations (output). The app will also be able to take in the users' physical conditions (weight, height) and other information (activity level, desire to bulk or cut) to provide them with the suggested intake of calories, proteins, and other nutritions.
+
+In addition to the previously mentioned features, our app will also be able to generate suggested weekly or daily food plans based on user-provided information. Moreover, leaning more towards the fitness side, our app will also provide calories burned from workouts and suggest weekly workout plans.
+
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
