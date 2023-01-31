@@ -1,7 +1,7 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9890085&assignment_repo_type=AssignmentRepo)
 # Calorie Tracker App
  
-#### Authors: [Ethan Quach](https://github.com/equac010), Daniel Sadeghi (https://github.com/), Edward Song (https://github.com/), Vincent (https://github.com/), [Dao Lin](https://github.com/DaDanielL)
+#### Authors: [Ethan Quach](https://github.com/equac010), Daniel Sadeghi (https://github.com/daniel-sadeghi), Edward Song (https://github.com/), Vincent (https://github.com/), [Dao Lin](https://github.com/DaDanielL)
 
 ## Project Description
 
