@@ -7,12 +7,9 @@
 
 As more and more people start to get into fitness, the necessity for free calorie tracking apps increases. More importantly, while many people are wary about their dietary health, the time it takes to track your calories and nutrition deters many from consistently recording their intake and maintaining a healthy diet. We aim for our app to streamline the meal planning and calorie tracking process to encourage our users to upkeep their dietary health without taking too much of their daily time and effort. We plan to do so through features such as a record of all the user's previously logged food. 
 
-We aim to create a web application using the React framework (HTML/CSS/Javascript) for frontend and C++ for backend. Therefore, our application will have an user-friendly interface for our users to interact with it easily and efficiently.
+We aim to create a desktop GUI with Qt creator with C++ for front and backend. Therefore, our application will have an user-friendly interface for our users to interact with it easily and efficiently.
 
 Obviously, our application need input from the user of the food they ate and its nutritional fact (input) in order to show the user their current daily caloric and nutritional intake (output). Our app will take in users' login credentials (input) to give them access to their account where they will find their dietary history, food record, physical conditions, and other personal informations (output). The app will also be able to take in the users' physical conditions (weight, height) and other information (activity level, desire to bulk or cut) to provide them with the suggested intake of calories, proteins, and other nutritions.
-
-In addition to the previously mentioned features, our app will also be able to generate suggested weekly or daily food plans based on user-provided information. Moreover, leaning more towards the fitness side, our app will also provide calories burned from workouts and suggest weekly workout plans.
-
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
