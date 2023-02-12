@@ -1,15 +1,17 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9890085&assignment_repo_type=AssignmentRepo)
 # Calorie Tracker App
  
-#### Authors: [Ethan Quach](https://github.com/equac010), [Daniel Sadeghi](https://github.com/daniel-sadeghi), Edward Song (https://github.com/esong029), Vincent (https://github.com/vtang020), [Dao Lin](https://github.com/DaDanielL)
+#### Authors: [Ethan Quach](https://github.com/equac010), [Daniel Sadeghi](https://github.com/daniel-sadeghi), [Edward Song](https://github.com/esong029), [Vincent Tang](https://github.com/vtang020), [Dao Lin](https://github.com/DaDanielL)
 
 ## Project Description
 
 As more and more people start to get into fitness, the necessity for free calorie tracking apps increases. More importantly, while many people are wary about their dietary health, the time it takes to track your calories and nutrition deters many from consistently recording their intake and maintaining a healthy diet. We aim for our app to streamline the meal planning and calorie tracking process to encourage our users to upkeep their dietary health without taking too much of their daily time and effort. We plan to do so through features such as a record of all the user's previously logged food. 
 
-We aim to create a desktop GUI with Qt creator with C++ for front and backend. Therefore, our application will have an user-friendly interface for our users to interact with it easily and efficiently.
+We aim to create a desktop GUI with Qt Creator (approval pending) with C++ for front and backend. Therefore, our application will have an user-friendly interface for our users to interact with it easily and efficiently.
 
-Obviously, our application need input from the user of the food they ate and its nutritional fact (input) in order to show the user their current daily caloric and nutritional intake (output). Our app will take in users' login credentials (input) to give them access to their account where they will find their dietary history, food record, physical conditions, and other personal informations (output). The app will also be able to take in the users' physical conditions (weight, height) and other information (activity level, desire to bulk or cut) to provide them with the suggested intake of calories, proteins, and other nutritions.
+Obviously, our application need input from the user of the food they ate and its nutritional fact (input) in order to show the user their current daily caloric and nutritional intake (output). Our app will take in users' login credentials (input) to give them access to their account where they will find their dietary history, food record, physical conditions, and other personal informations (output). The app will also be able to take in the users' physical conditions (weight, height) and other information (activity level, desire to bulk or cut) to provide them with the suggested caloric intake amount.
+
+
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
