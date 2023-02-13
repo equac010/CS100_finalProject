@@ -11,7 +11,7 @@ We aim to create a desktop GUI with Qt Creator (approval pending) with C++ for f
 
 Obviously, our application need input from the user of the food they ate and its nutritional fact (input) in order to show the user their current daily caloric and nutritional intake (output). Our app will take in users' login credentials (input) to give them access to their account where they will find their dietary history, food record, physical conditions, and other personal informations (output). The app will also be able to take in the users' physical conditions (weight, height) and other information (activity level, desire to bulk or cut) to provide them with the suggested caloric intake amount.
 
-Addition features our application will provide is weight tracking/logging, saved food and meal list, and tracking for other nutrients like protein, carbohydrates, and fats.
+Addition features our application will provide is weight tracking/logging, saved food and meal list, and tracking for other nutrients like protein, carbohydrate, and fat.
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
