@@ -14,7 +14,7 @@ Obviously, our application need input from the user of the food they ate and its
 Addition features our application will provide is calendar view of the user's dietary history, weekly reports, assistance with nutrition goal keeping, saved food and meal list, tracking for other nutrients like protein, carbohydrate, and fat.
 
 ## Class Diagram
-![UML Class Diagram](https://imgur.com/Lhoprow)
+![UML Class Diagram](https://i.imgur.com/Lhoprow.png)
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
