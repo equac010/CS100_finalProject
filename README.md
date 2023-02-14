@@ -14,7 +14,11 @@ Obviously, our application need input from the user of the food they ate and its
 Addition features our application will provide is calendar view of the user's dietary history, weekly reports, assistance with nutrition goal keeping, saved food and meal list, tracking for other nutrients like protein, carbohydrate, and fat.
 
 ## Class Diagram
-![UML Class Diagram](https://i.imgur.com/Lhoprow.png)
+MVC Pattern
+![MVC Class Diagram](https://imgur.com/a/HbzGrjD)
+![Internal Class Diagram](https://i.imgur.com/Lhoprow.png)
+
+This application will employ a Model-View-Controller architecture. User interactions will be sent to the MWController class that will notify the Model (our data and back end logic) in order to receive the proper data, and then pass that data to the MainWindow class so that it can display the information properly. The Model class is composed of Database objects, which would be used to store information about what the user has eaten and will be implemented with Food objects as shown in the internal class diagram.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
