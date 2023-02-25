@@ -19,6 +19,8 @@ MVC Pattern
 ![Internal Class Diagram](https://i.imgur.com/Lhoprow.png)
 
 This application will employ a Model-View-Controller architecture. User interactions will be sent to the MWController class that will notify the Model (our data and back end logic) in order to receive the proper data, and then pass that data to the MainWindow class so that it can display the information properly. The Model class is composed of Database objects, which would be used to store information about what the user has eaten and will be implemented with Food objects as shown in the internal class diagram.
+
+Our backend will employ the DailyInfo class to keep track of the user's current daily macros and meals. DailyInfo will have an aggregation of Meal objects, which are an aggregation of Food objects. Nutrition and FoodNutrition classes will serve to group of the macros values like carbohydrates, proteins, and fats. Finally the FoodSaver class will help save Food object so the user can save their food for future logging. The DailyInfoOutputter will help output information that reflects the user's current daily macros using the DailyInfo class.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
