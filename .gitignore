@@ -9,3 +9,9 @@ lib/cmake_install.cmake
 test/CMakeFiles/
 test/Makefile
 test/cmake_install.cmake
+lib/libgmock.a
+lib/libgmock_main.a
+lib/libgtest.a
+lib/libgtest_main.a
+lib/libsimpleLibrary.a
+bin/
