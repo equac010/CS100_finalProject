@@ -1,5 +1,5 @@
 #ifndef NUTRITION_H
-#define NUTITION_H
+#define NUTRITION_H
 
 class Nutrition{
     private:
