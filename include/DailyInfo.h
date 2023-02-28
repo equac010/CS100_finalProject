@@ -19,6 +19,7 @@ class DailyInfo{
         void addFood(int mealIndex, Food f){allMeals.at(mealIndex).addFood(f);}
         void removeFood(int mealIndex, int n){allMeals.at(mealIndex).removeFood(n);}
 
+        std::vector<Meal> getMeal() const{return allMeals;}
         Meal getBreakfast() const{return allMeals.at(0);}
         Meal getLunch() const{return allMeals.at(1);}
         Meal getDinner() const{return allMeals.at(2);}
