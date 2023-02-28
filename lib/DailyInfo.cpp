@@ -5,6 +5,6 @@
 #include <vector>
 
 DailyInfo::DailyInfo(){
-   std::vector<Meal> allMeals(4, Meal());      // meals : breakfast, lunch, dinner, snack
+   allMeals = std::vector<Meal>(4, Meal());      // meals : breakfast, lunch, dinner, snack
    dailyTarget = Nutrition(2000,130,50,40);    // values predetermined for now
 }
