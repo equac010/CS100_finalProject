@@ -18,6 +18,11 @@ class DailyInfo{
         bool dailyCaloricGoalReached() const;
         void addFood(int mealIndex, Food f){allMeals.at(mealIndex).addFood(f);}
         void removeFood(int mealIndex, int n){allMeals.at(mealIndex).removeFood(n);}
+
+        Meal getBreakfast() const{return allMeals.at(0);}
+        Meal getLunch() const{return allMeals.at(1);}
+        Meal getDinner() const{return allMeals.at(2);}
+        Meal getSnack() const{return allMeals.at(3);}
 };
 
 
