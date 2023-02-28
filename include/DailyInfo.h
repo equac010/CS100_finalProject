@@ -4,13 +4,11 @@
 #include "Nutrition.h"
 #include "Food.h"
 #include "Meal.h"
+#include <vector>
 
 class DailyInfo{
     private:
-        Meal breakfast;
-        Meal lunch;
-        Meal dinner;
-        Meal snack;
+        std::vector<Meal> allMeals;
         Nutrition dailyTarget;
 
     public:
