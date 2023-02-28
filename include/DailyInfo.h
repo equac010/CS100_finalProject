@@ -16,8 +16,8 @@ class DailyInfo{
         Nutrition calcTotalNutrition() const;
         bool dailyTargetReached() const;
         bool dailyCaloricGoalReached() const;
-        void addFood(Meal m, Food f){m.addFood(f);}
-        void removeFood(Meal m, int n){m.removeFood(n);}
+        void addFood(int mealIndex, Food f){allMeals.at(mealIndex).addFood(f);}
+        void removeFood(int mealIndex, int n){allMeals.at(mealIndex).removeFood(n);}
 };
 
 
