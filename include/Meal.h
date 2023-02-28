@@ -11,7 +11,7 @@ class Meal{
         std::vector<Food> allFood;
 
     public:
-        Meal();
+        Meal(){std::vector<Food> allFood;};
         Meal(std::vector<Food> allFood): allFood(allFood){}
 
         std::vector<Food> getAllFood() const{return allFood;}
