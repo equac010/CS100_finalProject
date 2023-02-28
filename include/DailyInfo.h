@@ -18,7 +18,6 @@ class DailyInfo{
         bool dailyTargetReached() const;
         void addFood(Meal m, Food f){m.addFood(f);}
         void removeFood(Meal m, int n){m.removeFood(n);}
-        
 };
 
 
