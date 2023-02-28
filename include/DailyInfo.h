@@ -12,8 +12,10 @@ class DailyInfo{
         Nutrition dailyTarget;
 
     public:
+        DailyInfo();
         Nutrition calcTotalNutrition() const;
         bool dailyTargetReached() const;
+        bool dailyCaloricGoalReached() const;
         void addFood(Meal m, Food f){m.addFood(f);}
         void removeFood(Meal m, int n){m.removeFood(n);}
 };
