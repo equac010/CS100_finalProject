@@ -13,4 +13,7 @@ TEST(MealTests, canCalcTotalNutrition){
     Meal m(foods);
     Nutrition total(2500,260,55,180);
     EXPECT_TRUE(m.calcTotalNutrition() == total);
+
+    Meal m2;
+    EXPECT_TRUE(m2.calcTotalNutrition() == Nutrition());
 }
