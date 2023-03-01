@@ -32,3 +32,27 @@ TEST(NutritionTests, settersWorking){
     EXPECT_EQ(n.getProtein(), 5);
     EXPECT_EQ(n.getFat(), 2);
 }
+TEST(NutritionTests, canAdd){
+    Nutrition n1(250, 20, 15, 40);
+    Nutrition n2(400, 15, 30, 60);
+    Nutrition n3 = n1 + n2;
+    EXPECT_EQ(n3.getCal(), 650);
+    EXPECT_EQ(n3.getCarb(), 35);
+    EXPECT_EQ(n3.getProtein(), 45);
+    EXPECT_EQ(n3.getFat(), 100);
+}
+TEST(NutritionTests, canMultiply){
+    Nutrition n1(250, 20, 15, 40);
+    Nutrition n3 = n1 * 2;
+    EXPECT_EQ(n3.getCal(), 500);
+    EXPECT_EQ(n3.getCarb(), 40);
+    EXPECT_EQ(n3.getProtein(), 30);
+    EXPECT_EQ(n3.getFat(), 80);
+}
+TEST(NutritionTests, equalWorks){
+    Nutrition n1(250, 20, 15, 40);
+    Nutrition n2(250, 20, 15, 40);
+    Nutrition n3(400, 15, 30, 60);
+    EXPECT_TRUE(n1 == n2);
+    EXPECT_FALSE(n2 == n3);
+}

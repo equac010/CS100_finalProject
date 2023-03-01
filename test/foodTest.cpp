@@ -13,8 +13,6 @@ TEST(FoodTests, calcTotalNutritionTest){
     Nutrition n(500, 40, 10, 25);
     Food f("ramen", 3, n);
     Nutrition total = f.calcTotalNutrition();
-    EXPECT_EQ(total.getCal(), 1500);
-    EXPECT_EQ(total.getCarb(), 120);
-    EXPECT_EQ(total.getProtein(), 30);
-    EXPECT_EQ(total.getFat(), 75);
+    Nutrition check = Nutrition(1500, 120, 30, 75);
+    EXPECT_TRUE(total == check);
 }

@@ -23,6 +23,10 @@ class Nutrition{
         void setFat(int n){fat = n;}
         void setCal(int n){cal = n;}
 
+        Nutrition operator+(const Nutrition& n) const;
+        Nutrition operator*(int n) const;
+        bool operator==(const Nutrition& n) const;
+
 };
 
 #endif
