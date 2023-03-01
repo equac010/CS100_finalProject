@@ -12,10 +12,5 @@ Food::Food(std::string name, int s, const Nutrition& n){
     nutritionPerServing = n;
 }
 Nutrition Food::calcTotalNutrition() const{
-    Nutrition total;
-    total.setCal(servingsTaken * nutritionPerServing.getCal());
-    total.setCarb(servingsTaken * nutritionPerServing.getCarb());
-    total.setProtein(servingsTaken * nutritionPerServing.getProtein());
-    total.setFat(servingsTaken * nutritionPerServing.getFat());
-    return total;
+    return nutritionPerServing * servingsTaken;
 } 

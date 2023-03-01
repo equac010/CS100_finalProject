@@ -22,7 +22,7 @@ class Food{
 
         void setName(std::string s){name=s;}
         void setServingsTaken(int n){servingsTaken = n;}
-        void setName(Nutrition n){nutritionPerServing = n;}
+        void setName(const Nutrition& n){nutritionPerServing = n;}
 };
 
 #endif
