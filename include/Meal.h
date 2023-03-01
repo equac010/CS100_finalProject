@@ -15,7 +15,7 @@ class Meal{
         Meal(std::vector<Food> allFood): allFood(allFood){}
 
         std::vector<Food> getAllFood() const{return allFood;}
-        void addFood(Food f);
+        void addFood(Food f){allFood.push_back(f);}
         void removeFood(int i);
         void removeFood(std::string name);
 
