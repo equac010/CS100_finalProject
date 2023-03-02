@@ -42,7 +42,11 @@ Our backend will employ the DailyInfo class to keep track of the user's current 
  > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
  > * What tasks you are planning for this next sprint.
 ## Backend Class Diagram (Updated)
-![Internal Class Diagram](https://i.imgur.com/6xUiKd3.png)
+![Internal Class Diagram](https://i.imgur.com/EenCpQW.png)
+Change #1: A DailyInfoEditor class is added to the DailyInfo class in consideration of the single responsibility principle. The DailyInfoEditor will take care of removing and adding Food objects into the DailyInfo class. In doing so, we are cutting down the size of the DailyInfo class and making the code more manageable. This change would also reduce the likelihood of merge conflicts in the future as changes to the implementations of how we edit allMeals now does not affect the DailyInfo class.
+Change #2: In consideration of the dependency inversion principle, Food, Meal, and DailyInfo now inherits from a new ICanCalcTotalNutrition interface. These classes now must implement the calcTotalNutrition() method in their own ways. This change will allow future, higher-level classes depending on the abstraction of the aforementioned method instead of low-level implementations, thus making future potential changes to the low-level implementations less costly.
+Change #3: In application of the dependency inversion principle, instead of implementing 3 different, separate classes responsible for saving and fetching user data, we know have FoodDataManager, MealDataManger, and DailyInfoDataManager all inheriting from an abstract DataManager class. This way, future changes to the 3 low-level, child classes will be less costly as the high-level classes that call them would not be affected by the changes.
+Change #4: In consideration of the open-closed principle, an MealItem interface is added, and the Food class inherits from it. Name is the only attribute of the interface. This change will make future additions of classes, such as Beverage, to be less costly because no changes would have to be made to the Meal class and other potential classes that could currently depend on the Food class.
  
  > ## Final deliverable
  > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
