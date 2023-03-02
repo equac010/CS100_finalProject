@@ -16,10 +16,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_mealInputButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-    QString textvalue;
+	QString textvalue;
+
 };
 #endif // MAINWINDOW_H
