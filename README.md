@@ -17,6 +17,7 @@ Addition features our application will provide is calendar view of the user's di
 MVC Pattern
 ![MVC Class Diagram](https://i.imgur.com/ZdKb0B5.png)
 ![Internal Class Diagram](https://i.imgur.com/PLvmmwP.png)
+![UI Flow Diagram](https://www.figma.com/file/vmKsHpSTvGEe8Qmgh5mGTn/Untitled?node-id=0%3A1&t=ZU63MlYovnjqONRr-0)
 
 This application will employ a Model-View-Controller architecture. User interactions will be sent to the MWController class that will notify the Model (our data and back end logic) in order to receive the proper data, and then pass that data to the MainWindow class so that it can display the information properly. The Model class is composed of Database objects, which would be used to store information about what the user has eaten and will be implemented with Food objects as shown in the internal class diagram.
 
