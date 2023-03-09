@@ -4,10 +4,11 @@
 #include "Nutrition.h"
 #include "Food.h"
 #include "ICanCalcTotalNutrition.h"
+#include "ISerializable.h"
 #include <vector>
 #include <string>
 
-class Meal: public ICanCalcTotalNutrition{
+class Meal: public ICanCalcTotalNutrition, public ISerializable{
     private: 
         std::vector<Food> allFood;
 

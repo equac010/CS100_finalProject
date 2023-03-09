@@ -3,9 +3,10 @@
 
 #include "Nutrition.h"
 #include "ICanCalcTotalNutrition.h"
+#include "ISerializable.h"
 #include <string>
 
-class Food: public ICanCalcTotalNutrition{
+class Food: public ICanCalcTotalNutrition, public ISerializable{
     private:
         std::string name;
         int servingsTaken;
