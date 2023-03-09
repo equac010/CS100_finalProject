@@ -18,8 +18,7 @@ class Meal: public ICanCalcTotalNutrition, public ISerializable{
 
         std::vector<Food> getAllFood() const{return allFood;}
         void addFood(Food f){allFood.push_back(f);}
-        void removeFood(int i);
-        void removeFood(std::string name);
+        void removeFood(int i=-1);
 
         Nutrition calcTotalNutrition() const override;
 
