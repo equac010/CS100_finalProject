@@ -16,8 +16,9 @@ class DailyInfo: public ICanCalcTotalNutrition, public ISerializable{
     public:
         DailyInfo();
         Nutrition calcTotalNutrition() const;
-        bool dailyTargetReached() const;
-        bool dailyCaloricGoalReached() const;
+        bool dailyTargetReached() const{return (dailyTarget == calcTotalNutrition());}
+        bool dailyCaloricGoalReached() const{return (dailyTarget.getCal() == calcTotalNutrition().getCal());}
+        std::vector<double> getNutritionPercentages() const;
         void addFood(int mealIndex, Food f){allMeals.at(mealIndex).addFood(f);}
         void removeFood(int mealIndex, int n){allMeals.at(mealIndex).removeFood(n);}
 

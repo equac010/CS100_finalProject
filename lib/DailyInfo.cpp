@@ -18,3 +18,16 @@ Nutrition DailyInfo::calcTotalNutrition() const{
    }
    return total;
 }
+
+std::vector<double> DailyInfo::getNutritionPercentages() const{
+   // order: calories, carb, protein, fat
+   std::vector<double> percs(4);
+   Nutrition totalNutrition = calcTotalNutrition();
+
+   percs.push_back(std::min(1.0, dailyTarget.getCal()/(double)(dailyTarget.getCal())));
+   percs.push_back(std::min(1.0, dailyTarget.getCarb()/(double)(dailyTarget.getCarb())));
+   percs.push_back(std::min(1.0, dailyTarget.getProtein()/(double)(dailyTarget.getProtein())));
+   percs.push_back(std::min(1.0, dailyTarget.getFat()/(double)(dailyTarget.getFat())));
+
+   return percs;
+}
