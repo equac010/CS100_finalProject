@@ -2,9 +2,10 @@
 #define FOOD_H
 
 #include "Nutrition.h"
+#include "ICanCalcTotalNutrition.h"
 #include <string>
 
-class Food{
+class Food: public ICanCalcTotalNutrition{
     private:
         std::string name;
         int servingsTaken;
@@ -14,7 +15,7 @@ class Food{
         Food();
         Food(std::string, int, const Nutrition&);
 
-        Nutrition calcTotalNutrition() const;
+        Nutrition calcTotalNutrition() const override;
 
         std::string getName() const{return name;}
         int getServingsTaken() const{return servingsTaken;}

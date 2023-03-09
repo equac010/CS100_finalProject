@@ -4,16 +4,17 @@
 #include "Nutrition.h"
 #include "Food.h"
 #include "Meal.h"
+#include "ICanCalcTotalNutrition.h"
 #include <vector>
 
-class DailyInfo{
+class DailyInfo: public ICanCalcTotalNutrition{
     private:
         std::vector<Meal> allMeals;
         Nutrition dailyTarget;
 
     public:
         DailyInfo();
-        Nutrition calcTotalNutrition() const;
+        Nutrition calcTotalNutrition() const override;
         bool dailyTargetReached() const;
         bool dailyCaloricGoalReached() const;
         void addFood(int mealIndex, Food f){allMeals.at(mealIndex).addFood(f);}

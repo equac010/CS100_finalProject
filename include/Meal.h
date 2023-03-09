@@ -3,10 +3,11 @@
 
 #include "Nutrition.h"
 #include "Food.h"
+#include "ICanCalcTotalNutrition.h"
 #include <vector>
 #include <string>
 
-class Meal{
+class Meal: public ICanCalcTotalNutrition{
     private: 
         std::vector<Food> allFood;
 
@@ -19,7 +20,7 @@ class Meal{
         void removeFood(int i);
         void removeFood(std::string name);
 
-        Nutrition calcTotalNutrition() const;
+        Nutrition calcTotalNutrition() const override;
 
 };
 
