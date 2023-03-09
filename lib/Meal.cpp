@@ -12,3 +12,12 @@ Nutrition Meal::calcTotalNutrition() const{
    }
    return total;
 }
+
+void Meal::removeFood(int i=-1){
+   if(i==-1){
+      allFood.pop_back();
+      return;
+   }
+   allFood.erase(allFood.begin()+i);
+   return;
+}
