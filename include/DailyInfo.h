@@ -15,11 +15,13 @@ class DailyInfo: public ICanCalcTotalNutrition, public ISerializable{
 
     public:
         DailyInfo();
+        DailyInfo(Nutrition n);
         Nutrition calcTotalNutrition() const;
         bool dailyTargetReached() const;
-        bool dailyCaloricGoalReached() const;
+        bool dailyCaloricGoalReached() const{return (calcTotalNutrition().getCal() >= dailyTarget.getCal());}
+        std::vector<double> getNutritionPercentages() const;
         void addFood(int mealIndex, Food f){allMeals.at(mealIndex).addFood(f);}
-        void removeFood(int mealIndex, int n){allMeals.at(mealIndex).removeFood(n);}
+        void removeFood(int mealIndex, int n=-1){allMeals.at(mealIndex).removeFood(n);}
 
         std::vector<Meal> getMeal() const{return allMeals;}
         Meal getBreakfast() const{return allMeals.at(0);}
