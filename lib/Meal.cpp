@@ -13,7 +13,7 @@ Nutrition Meal::calcTotalNutrition() const{
    return total;
 }
 
-void Meal::removeFood(int i=-1){
+void Meal::removeFood(int i){
    if(i==-1){
       allFood.pop_back();
       return;
