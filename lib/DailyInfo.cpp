@@ -1,6 +1,5 @@
 #include "../include/DailyInfo.h"
 #include "../include/Nutrition.h"
-#include "../include/Food.h"
 #include "../include/Meal.h"
 #include <vector>
 #include <iterator>
