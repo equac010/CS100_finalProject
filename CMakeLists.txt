@@ -8,18 +8,24 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(INSTALL_EXAMPLEDIR "${INSTALL_EXAMPLESDIR}/charts/piechart")
 
+find_package(Qt6 REQUIRED COMPONENTS Charts Core Gui)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Charts REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui Charts REQUIRED)
+
+
 
 set(PROJECT_SOURCES
-    src/inputform.cpp
-    src/inputform.h
-    src/main.cpp
-    src/mainwindow.cpp
-    src/mainwindow.h
-    resources/inputform.ui
-    resources/mainwindow.ui
+    inputform.cpp
+    inputform.h
+    main.cpp
+    mainwindow.cpp
+    mainwindow.h
+    inputform.ui
+    mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -46,6 +52,12 @@ else()
 endif()
 
 target_link_libraries(final-project-surfin-and-mergin PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries (final-project-surfin-and-mergin PRIVATE Qt${QT_VERSION_MAJOR}::Charts)
+target_link_libraries(final-project-surfin-and-mergin PUBLIC
+    Qt::Charts
+    Qt::Core
+    Qt::Gui
+)
 
 set_target_properties(final-project-surfin-and-mergin PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
@@ -58,6 +70,15 @@ set_target_properties(final-project-surfin-and-mergin PROPERTIES
 install(TARGETS final-project-surfin-and-mergin
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
+install(TARGETS final-project-surfin-and-mergin
+    RUNTIME DESTINATION "${INSTALL_EXAMPLEDIR}"
+    BUNDLE DESTINATION "${INSTALL_EXAMPLEDIR}"
+    LIBRARY DESTINATION "${INSTALL_EXAMPLEDIR}"
+)
+
+
+
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(final-project-surfin-and-mergin)

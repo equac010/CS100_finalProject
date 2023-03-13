@@ -3,6 +3,12 @@
 
 #include <QMainWindow>
 
+#include<QtCharts>
+#include<QChartView>
+#include<QPieSeries>
+#include<QPieSlice>
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
