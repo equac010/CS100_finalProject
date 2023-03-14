@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    /*
     QPieSeries *series = new QPieSeries();
     series->append("Protein", 40);
     series->append("Fat", 25);
@@ -20,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QChartView *chartView = new QChartView(chart);
     chartView->setParent(ui->frame);
+    */
 
 }
 

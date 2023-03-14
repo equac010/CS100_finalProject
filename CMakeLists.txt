@@ -13,13 +13,10 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-    src/inputform.cpp
-    src/inputform.h
-    src/main.cpp
-    src/mainwindow.cpp
-    src/mainwindow.h
-    resources/inputform.ui
-    resources/mainwindow.ui
+    main.cpp
+    inputform.cpp inputform.h inputform.ui
+    mainwindow.cpp mainwindow.h mainwindow.ui
+    #adddialog.h adddialog.cpp adddialog.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
