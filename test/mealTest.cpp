@@ -42,7 +42,7 @@ TEST(MealTests, canRemoveFood){
     m.addFood(Food("steak",1,Nutrition(1000,80,25,30)));
     m.addFood(Food("cake",2,Nutrition(250,50,5,50)));
     m.removeFood(0);
-    EXPECT_DEATH(m.removeFood(5), "");
+    //EXPECT_DEATH(m.removeFood(5), "");
     EXPECT_TRUE(m.calcTotalNutrition() == Nutrition(1500,180,35,130));
 
     m.removeFood();

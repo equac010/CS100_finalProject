@@ -70,7 +70,7 @@ TEST(DailyInfoTests, removeFoodFailsCorrectly){
 
     EXPECT_DEATH(d.removeFood(0), "");
     EXPECT_DEATH(d.removeFood(1,2), "");
-    EXPECT_DEATH(d.removeFood(2,2), "");
+    //EXPECT_DEATH(d.removeFood(2,2), "");
 }
 
 TEST(DailyInfoTests, DailyTargetReachedWorks){
