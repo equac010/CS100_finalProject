@@ -6,7 +6,7 @@ Food::Food(){
     servingsTaken = 0;
     nutritionPerServing = Nutrition();
 }
-Food::Food(std::Qstring name, int s, const Nutrition& n){
+Food::Food(QString name, int s, const Nutrition& n){
     name = name;
     servingsTaken = s;
     nutritionPerServing = n;

@@ -178,7 +178,7 @@
     <item>
      <widget class="QDoubleSpinBox" name="doubleSpinBox_Qty">
       <property name="decimals">
-       <number>1</number>
+       <number>0</number>
       </property>
      </widget>
     </item>
@@ -206,7 +206,7 @@
     <item>
      <widget class="QDoubleSpinBox" name="doubleSpinBox_protein">
       <property name="decimals">
-       <number>1</number>
+       <number>0</number>
       </property>
      </widget>
     </item>
@@ -220,7 +220,7 @@
     <item>
      <widget class="QDoubleSpinBox" name="doubleSpinBox_fat">
       <property name="decimals">
-       <number>1</number>
+       <number>0</number>
       </property>
      </widget>
     </item>
@@ -234,7 +234,7 @@
     <item>
      <widget class="QDoubleSpinBox" name="doubleSpinBox_carbs">
       <property name="decimals">
-       <number>1</number>
+       <number>0</number>
       </property>
      </widget>
     </item>
