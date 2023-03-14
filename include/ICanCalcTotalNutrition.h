@@ -4,7 +4,7 @@
 
 class ICanCalcTotalNutrition{
     public:
-        virtual Nutrition calcTotalNutrition() const = 0;
+        virtual Nutrition calcTotalNutrition() = 0;
 };
 
 #endif

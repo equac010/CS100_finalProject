@@ -4,9 +4,9 @@
 #include "../include/Nutrition.h"
 
 TEST(FoodTests, constructorNoFail){
-    EXPECT_NO_THROW(new Food());
+    EXPECT_NO_THROW(Food());
     Nutrition n;
-    EXPECT_NO_THROW(new Food("steak", 1, n));
+    EXPECT_NO_THROW(Food("steak", 1, n));
 }
 
 TEST(FoodTests, calcTotalNutritionTest){
