@@ -20,7 +20,7 @@ class Meal: public ICanCalcTotalNutrition, public ISerializable{
         void addFood(Food f){allFood.push_back(f);}
         void removeFood(int i=-1);
 
-        Nutrition calcTotalNutrition() const override;
+        Nutrition calcTotalNutrition() override;
 
 };
 

@@ -16,7 +16,7 @@ class Food: public ICanCalcTotalNutrition, public ISerializable{
         Food();
         Food(std::string, int, const Nutrition&);
 
-        Nutrition calcTotalNutrition() const override;
+        Nutrition calcTotalNutrition() override;
 
         std::string getName() const{return name;}
         int getServingsTaken() const{return servingsTaken;}

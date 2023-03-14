@@ -4,9 +4,9 @@
 #include <vector>
 #include <iterator>
 
-Nutrition Meal::calcTotalNutrition() const{
+Nutrition Meal::calcTotalNutrition(){
    Nutrition total;
-   std::vector<const Food>::iterator it;
+   std::vector<Food>::iterator it;
    for(it = allFood.begin(); it != allFood.end(); it++){
       total = total + (*it).calcTotalNutrition();
    }
