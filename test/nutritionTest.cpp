@@ -3,10 +3,10 @@
 #include "../include/Nutrition.h"
 
 TEST(NutritionTests, constructorWorks){
-    EXPECT_NO_THROW(new Nutrition(3,52,12,3));
+    EXPECT_NO_THROW(Nutrition(3,52,12,3));
 }
 TEST(NutritionTests, defaultConstructorWorks){
-    EXPECT_NO_THROW(new Nutrition());
+    EXPECT_NO_THROW(Nutrition());
 }
 TEST(NutritionTests, constructorsAssigningProperValues){
     Nutrition n1(200, 20, 8, 10);
