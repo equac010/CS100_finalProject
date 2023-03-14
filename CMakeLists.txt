@@ -26,6 +26,16 @@ set(PROJECT_SOURCES
     mainwindow.h
     inputform.ui
     mainwindow.ui
+    dailyinfo.cpp
+    dailyinfo.h
+    food.cpp
+    food.h
+    ICanCalcTotalNutrition.h
+    ISerializable.h
+    meal.cpp
+    meal.h
+    nutrition.cpp
+    nutrition.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

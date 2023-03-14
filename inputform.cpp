@@ -19,7 +19,7 @@ InputForm::~InputForm()
 
 void InputForm::on_saveButton_clicked(QAbstractButton *button){
     QString foodName = ui->textName->toPlainText();
-
+    Nutrition n(calories, protein, fat, carbs);
 
     std::cout << foodName.toStdString() << std::endl;
     std::cout << quantity << std::endl;
@@ -29,10 +29,8 @@ void InputForm::on_saveButton_clicked(QAbstractButton *button){
     std::cout << carbs << std::endl;
 
 
-
-
-
-    //m.addFood(Food(foodName,quantity,n));
+    //Food inputFood(foodName, quantity, n);
+    Food *inputFood = new Food(foodName, quantity, n);
     close();
 }
 

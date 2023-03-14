@@ -1,6 +1,6 @@
-#include "../include/nutrition.h"
-#include "../include/food.h"
-#include "../include/meal.h"
+#include "nutrition.h"
+#include "food.h"
+#include "meal.h"
 #include <vector>
 #include <iterator>
 

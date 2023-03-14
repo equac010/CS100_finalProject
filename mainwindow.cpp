@@ -1,6 +1,6 @@
 #include "mainwindow.h"
-#include "./ui_mainwindow.h"
-#include "./inputform.h"
+#include "ui_mainwindow.h"
+#include "inputform.h"
 
 
 MainWindow::MainWindow(QWidget *parent)

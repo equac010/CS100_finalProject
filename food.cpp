@@ -1,4 +1,4 @@
-#include "../include/food.h"
+#include "food.h"
 #include <Qstring>
 
 Food::Food(){

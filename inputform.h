@@ -32,11 +32,6 @@ public:
     int fat = 0;
     int carbs = 0;
 
-    //std::vector<Food> foods = {};
-
-    //Meal m(foods);
-
-
 private slots:
     void on_saveButton_clicked(QAbstractButton *button);
 

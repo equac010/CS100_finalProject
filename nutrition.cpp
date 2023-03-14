@@ -1,4 +1,4 @@
-#include "../include/nutrition.h"
+#include "nutrition.h"
 
 Nutrition Nutrition::operator+(const Nutrition& n) const{
     return Nutrition(getCal()+n.getCal(),getCarb()+n.getCarb(),getProtein()+n.getProtein(),getFat()+n.getFat());

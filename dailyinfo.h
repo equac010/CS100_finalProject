@@ -1,45 +1,34 @@
-#include "../include/dailyinfo.h"
-#include "../include/nutrition.h"
-#include "../include/meal.h"
+#ifndef DAILYINFO_H
+#define DAILYINFO_H
+
+#include "nutrition.h"
+#include "food.h"
+#include "meal.h"
+#include "ICanCalcTotalNutrition.h"
+#include "ISerializable.h"
 #include <vector>
-#include <iterator>
 
-DailyInfo::DailyInfo(){
-   allMeals = std::vector<Meal>(4, Meal());      // meals : breakfast, lunch, dinner, snack
-   dailyTarget = Nutrition(2000,130,50,40);    // values predetermined for now
-}
+class DailyInfo: public ICanCalcTotalNutrition, public ISerializable{
+    private:
+        std::vector<Meal> allMeals;
+        Nutrition dailyTarget;
 
-DailyInfo::DailyInfo(Nutrition n){
-   allMeals = std::vector<Meal>(4, Meal());      // meals : breakfast, lunch, dinner, snack
-   dailyTarget = n;
-}
+    public:
+        DailyInfo();
+        DailyInfo(Nutrition n);
+        Nutrition calcTotalNutrition() override;
+        bool dailyTargetReached();
+        bool dailyCaloricGoalReached() {return (calcTotalNutrition().getCal() >= dailyTarget.getCal());}
+        std::vector<double> getNutritionPercentages();
+        void addFood(int mealIndex, Food f){allMeals.at(mealIndex).addFood(f);}
+        void removeFood(int mealIndex, int n=-1){allMeals.at(mealIndex).removeFood(n);}
 
-Nutrition DailyInfo::calcTotalNutrition() const{
-   Nutrition total;
-   std::vector<const Meal>::iterator it;
-   for(it = allMeals.begin(); it != allMeals.end(); it++){
-      total = total + (*it).calcTotalNutrition();
-   }
-   return total;
-}
+        std::vector<Meal> getMeal() const{return allMeals;}
+        Meal getBreakfast() const{return allMeals.at(0);}
+        Meal getLunch() const{return allMeals.at(1);}
+        Meal getDinner() const{return allMeals.at(2);}
+        Meal getSnack() const{return allMeals.at(3);}
+};
 
-std::vector<double> DailyInfo::getNutritionPercentages() const{
-   // order: calories, carb, protein, fat
-   std::vector<double> percs;
-   Nutrition totalNutrition = calcTotalNutrition();
 
-   percs.push_back((std::min(1.0, totalNutrition.getCal()/(double)(dailyTarget.getCal()))));
-   percs.push_back(std::min(1.0, totalNutrition.getCarb()/(double)(dailyTarget.getCarb())));
-   percs.push_back(std::min(1.0, totalNutrition.getProtein()/(double)(dailyTarget.getProtein())));
-   percs.push_back(std::min(1.0, totalNutrition.getFat()/(double)(dailyTarget.getFat())));
-
-   return percs;
-}
-
-bool DailyInfo::dailyTargetReached() const{
-   Nutrition total = calcTotalNutrition();
-   return (total.getCal() >= dailyTarget.getCal() &&
-           total.getCarb() >= dailyTarget.getCarb() &&
-           total.getProtein() >= dailyTarget.getProtein() &&
-           total.getFat() >= dailyTarget.getFat());
-}
+#endif
