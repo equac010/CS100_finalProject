@@ -58,7 +58,7 @@
     <set>QDialogButtonBox::Cancel</set>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -76,7 +76,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="textName">
+     <widget class="QPlainTextEdit" name="textName">
       <property name="maximumSize">
        <size>
         <width>100</width>

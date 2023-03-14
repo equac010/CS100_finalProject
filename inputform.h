@@ -4,6 +4,13 @@
 #include "QtWidgets/qabstractbutton.h"
 #include <QDialog>
 #include <QString>
+
+#include "food.h"
+#include "meal.h"
+#include "nutrition.h"
+#include <vector>
+#include <iterator>
+
 namespace Ui {
 class InputForm;
 }
@@ -15,7 +22,20 @@ class InputForm : public QDialog
 public:
     explicit InputForm(QWidget *parent = nullptr);
     ~InputForm();
+
     QString foodName;
+    int quantity = 0;
+    Nutrition n;
+
+    int calories = 0;
+    int protein = 0;
+    int fat = 0;
+    int carbs = 0;
+
+    //std::vector<Food> foods = {};
+
+    //Meal m(foods);
+
 
 private slots:
     void on_saveButton_clicked(QAbstractButton *button);
@@ -33,7 +53,8 @@ private slots:
 
     void on_doubleSpinBox_carbs_valueChanged(double carbInput);
 
-    void on_textName_objectNameChanged(const QString &foodName);
+
+
 
 private:
     Ui::InputForm *ui;

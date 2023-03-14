@@ -24,7 +24,7 @@ class Food: public ICanCalcTotalNutrition, public ISerializable{
 
         void setName(QString s){name=s;}
         void setServingsTaken(int n){servingsTaken = n;}
-        void setName(const Nutrition& n){nutritionPerServing = n;}
+        void setNutrition(const Nutrition& n){nutritionPerServing = n;}
 };
 
 #endif
