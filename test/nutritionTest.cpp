@@ -44,7 +44,7 @@ TEST(NutritionTests, canAdd){
 }
 TEST(NutritionTets, canAddWithDefault){
     Nutrition n1(250, 20, 15, 40);
-    Nutrition n2();
+    Nutrition n2;
     Nutrition n3 = n1 + n2;
     EXPECT_EQ(n3.getCal(), 250);
     EXPECT_EQ(n3.getCarb(), 20);
