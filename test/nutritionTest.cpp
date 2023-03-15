@@ -4,6 +4,7 @@
 
 TEST(NutritionTests, constructorWorks){
     EXPECT_NO_THROW(Nutrition(3,52,12,3));
+    EXPECT_NO_THROW(Nutrition(-3,-52,-12,-3));
 }
 TEST(NutritionTests, defaultConstructorWorks){
     EXPECT_NO_THROW(Nutrition());
@@ -40,6 +41,15 @@ TEST(NutritionTests, canAdd){
     EXPECT_EQ(n3.getCarb(), 35);
     EXPECT_EQ(n3.getProtein(), 45);
     EXPECT_EQ(n3.getFat(), 100);
+}
+TEST(NutritionTets, canAddWithDefault){
+    Nutrition n1(250, 20, 15, 40);
+    Nutrition n2;
+    Nutrition n3 = n1 + n2;
+    EXPECT_EQ(n3.getCal(), 250);
+    EXPECT_EQ(n3.getCarb(), 20);
+    EXPECT_EQ(n3.getProtein(), 15);
+    EXPECT_EQ(n3.getFat(), 40);
 }
 TEST(NutritionTests, canMultiply){
     Nutrition n1(250, 20, 15, 40);
