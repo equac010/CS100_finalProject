@@ -18,6 +18,21 @@ TEST(DailyInfoTests, oneParamConstructorWorks){
     EXPECT_NO_THROW(DailyInfo(Nutrition(200,30,20,10)));
 }
 
+TEST(DailyInfoTests, addFoodWorks){
+    DailyInfo d;
+    d.addFood(0,Food("ramen",2,Nutrition(500,40,10,25)));
+    d.addFood(1,Food("steak",1,Nutrition(1000,80,25,30)));
+    d.addFood(1,Food("steak",1,Nutrition(1000,80,25,30)));
+
+    Meal m0 = d.getMeal().at(0);
+    Meal m1 = d.getMeal().at(1);
+    Meal m2 = d.getMeal().at(2);
+
+    EXPECT_EQ(m0.getAllFood().size(), 1);
+    EXPECT_EQ(m1.getAllFood().size(), 2);
+    EXPECT_EQ(m2.getAllFood().size(), 0);
+}
+
 TEST(DailyInfoTests, canCalcTotalNutrition){
     DailyInfo empty;
     EXPECT_TRUE(empty.calcTotalNutrition()==Nutrition());
@@ -70,7 +85,6 @@ TEST(DailyInfoTests, removeFoodFailsCorrectly){
 
     EXPECT_DEATH(d.removeFood(0), "");
     EXPECT_DEATH(d.removeFood(1,2), "");
-    //EXPECT_DEATH(d.removeFood(2,2), "");
 }
 
 TEST(DailyInfoTests, DailyTargetReachedWorks){
