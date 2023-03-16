@@ -11,6 +11,6 @@ Food::Food(std::string name, int s, const Nutrition& n){
     servingsTaken = s;
     nutritionPerServing = n;
 }
-Nutrition Food::calcTotalNutrition(){
+Nutrition Food::calcTotalNutrition() const{
     return nutritionPerServing * servingsTaken;
 } 

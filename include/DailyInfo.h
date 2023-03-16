@@ -16,7 +16,7 @@ class DailyInfo: public ICanCalcTotalNutrition, public ISerializable{
     public:
         DailyInfo();
         DailyInfo(Nutrition n);
-        Nutrition calcTotalNutrition() override;
+        Nutrition calcTotalNutrition() const override;
         bool dailyTargetReached();
         bool dailyCaloricGoalReached() {return (calcTotalNutrition().getCal() >= dailyTarget.getCal());}
         std::vector<double> getNutritionPercentages();

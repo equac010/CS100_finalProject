@@ -14,9 +14,9 @@ DailyInfo::DailyInfo(Nutrition n){
    dailyTarget = n;
 }
 
-Nutrition DailyInfo::calcTotalNutrition(){
+Nutrition DailyInfo::calcTotalNutrition() const{
    Nutrition total;
-   std::vector<Meal>::iterator it;
+   std::vector<Meal>::const_iterator it;
    for(it = allMeals.begin(); it != allMeals.end(); it++){
       total = total + (*it).calcTotalNutrition();
    }
