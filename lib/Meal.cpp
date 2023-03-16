@@ -18,6 +18,9 @@ void Meal::removeFood(int i){
       allFood.pop_back();
       return;
    }
+   if(i<-1 || i>=allFood.size()){
+      return;
+   }
    allFood.erase(allFood.begin()+i);
    return;
 }

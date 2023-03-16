@@ -6,6 +6,7 @@
 #include <vector>
 #include <iterator>
 #include <iostream>
+#include <algorithm>
 #include <string>
 
 int main(int argc, char* argv[]) { 
@@ -52,8 +53,11 @@ int main(int argc, char* argv[]) {
                 std::cin>>meal;
                 std::cout<<"\n";
                 
-                f = Food(name, amount, Nutrition(cal, carb, protein,fat));
+                f = Food(name, std::max(1,amount), Nutrition(std::max(0,cal), std::max(0,carb), std::max(0,protein),std::max(0,fat)));
                 f.setName(name);
+                if(meal < 0 || meal > 3){
+                    meal = 0;
+                }
                 d.addFood(meal, f);
                 break;
 
@@ -64,6 +68,7 @@ int main(int argc, char* argv[]) {
                 std::cout<<"Enter the number of the food item you'd like to remove: ";
                 std::cin>>foodIndex;
                 foodIndex--;
+
                 d.removeFood(meal, foodIndex);
                 break;
 

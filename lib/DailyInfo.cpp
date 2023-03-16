@@ -14,6 +14,16 @@ DailyInfo::DailyInfo(Nutrition n){
    dailyTarget = n;
 }
 
+void DailyInfo::removeFood(int mealIndex, int n){
+   if(mealIndex < 0 || mealIndex >= allMeals.size()){
+      return;
+   }
+   if(allMeals.at(mealIndex).getAllFood().size() == 0){
+      return;
+   }
+   allMeals.at(mealIndex).removeFood(n);
+}
+
 Nutrition DailyInfo::calcTotalNutrition() const{
    Nutrition total;
    std::vector<Meal>::const_iterator it;
