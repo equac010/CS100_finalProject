@@ -25,6 +25,8 @@ Our backend will employ the DailyInfo class to keep track of the user's current 
 
 ## Backend Class Diagram (Updated for SOLIDS)
 ![Internal Class Diagram](https://i.imgur.com/TisbxnA.png)
+
+(refer to older versions for better description)
 Change #1: A DailyInfoEditor class is added to the DailyInfo class in consideration of the single responsibility principle. The DailyInfoEditor will take care of removing and adding Food objects into the DailyInfo class. In doing so, we are cutting down the size of the DailyInfo class and making the code more manageable. This change would also reduce the likelihood of merge conflicts in the future as changes to the implementations of how we edit allMeals now does not affect the DailyInfo class.
 
 Change #2: In consideration of the dependency inversion principle, Food, Meal, and DailyInfo now inherits from a new ICanCalcTotalNutrition interface. These classes now must implement the calcTotalNutrition() method in their own ways. This change will allow future, higher-level classes depending on the abstraction of the aforementioned method instead of low-level implementations, thus making future potential changes to the low-level implementations less costly.
