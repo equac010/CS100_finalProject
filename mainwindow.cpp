@@ -15,15 +15,3 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_mealInputButton_clicked()
-{
-    AddFoodDialog addDialog;
-    addDialog.exec();
-}
-
-
-void MainWindow::on_deleteButton_clicked()
-{
-
-}
-

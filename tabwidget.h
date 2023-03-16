@@ -15,9 +15,9 @@ public:
 
 public slots:
     void showAddFoodDialog();
-    void addFoodEntry(const QString &foodName);
-    void editEntry();
-    void removeEntry();
+    void addFoodEntry(const QString &foodName, const double servings, const int calPerServing, const int proteinPerServing, const int carbPerServing, const int fatPerServing);
+    //void editEntry();
+    //void removeEntry();
 
 signals:
     void selectionChanged (const QItemSelection &selected);

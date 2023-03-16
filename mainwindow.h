@@ -15,11 +15,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void on_mealInputButton_clicked();
-
-    void on_deleteButton_clicked();
-
 private:
     Ui::MainWindow *ui;
 

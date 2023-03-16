@@ -35,6 +35,7 @@ QVariant FoodTableModel::headerData(int section, Qt::Orientation orientation, in
     return QVariant();
 }
 
+/*
 bool FoodTableModel::setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role)
 {
     if (value != headerData(section, orientation, role)) {
@@ -45,6 +46,7 @@ bool FoodTableModel::setHeaderData(int section, Qt::Orientation orientation, con
 
     return false;
 }
+*/
 
 
 int FoodTableModel::rowCount(const QModelIndex &parent) const

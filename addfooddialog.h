@@ -14,6 +14,13 @@ class AddFoodDialog : public QDialog
 public:
     explicit AddFoodDialog(QWidget *parent = nullptr);
     ~AddFoodDialog();
+    QString name();
+    double servings();
+    int calPerServing();
+    int proteinPerServing();
+    int carbPerServing();
+    int fatPerServing();
+
 
 private:
     Ui::AddFoodDialog *ui;

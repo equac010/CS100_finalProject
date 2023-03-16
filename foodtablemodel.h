@@ -15,7 +15,7 @@ public:
     // Header:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
 
-    bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole) override;
+    //bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole) override;
 
     // Basic functionality:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -39,6 +39,7 @@ public:
 
 private:
     QList<QPair<Food, QDateTime>> listOfFoods;
+
 };
 
 #endif // FOODTABLEMODEL_H
