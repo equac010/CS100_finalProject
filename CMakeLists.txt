@@ -15,7 +15,6 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 set(PROJECT_SOURCES
     main.cpp
     addfooddialog.h addfooddialog.cpp addfooddialog.ui
-    inputform.cpp inputform.h inputform.ui
     mainwindow.cpp mainwindow.h mainwindow.ui
     foodtablemodel.h foodtablemodel.cpp
     food.h food.cpp
