@@ -15,6 +15,7 @@ add_executable(main
     Food.cpp
     Meal.cpp
     Nutrition.cpp
+    DailyInfoOutputter.cpp
 )
 
 find_library(M_LIB m)
