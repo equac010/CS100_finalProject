@@ -1,17 +1,17 @@
 #include "mainwindow.h"
-#include "./ui_mainwindow.h"
-#include "addfooddialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent),
+      tabWidget(new TabWidget)
+
 {
-    ui->setupUi(this);
+    setCentralWidget(tabWidget);
+    setWindowTitle(tr("Calorie Tracker App"));
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+
 }
 
 

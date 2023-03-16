@@ -2,10 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+#include "tabwidget.h"
 
 class MainWindow : public QMainWindow
 {
@@ -16,7 +13,7 @@ public:
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+    TabWidget *tabWidget;
 
 };
 #endif // MAINWINDOW_H

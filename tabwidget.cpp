@@ -8,7 +8,8 @@
 #include <QSortFilterProxyModel>
 
 TabWidget::TabWidget(QWidget *parent):
-    QTabWidget(parent)
+    QTabWidget(parent),
+    table(new FoodTableModel(this))
 {
     auto proxyModel = new DateFilterProxyModel(this);
     proxyModel->setSourceModel(table);
@@ -28,9 +29,10 @@ TabWidget::TabWidget(QWidget *parent):
     auto gridLayout = new QGridLayout;
     gridLayout->addWidget(addFoodButton);
     gridLayout->addWidget(dailyTableView);
+    auto w = new QWidget;
+    w->setLayout(gridLayout);
 
-
-
+    addTab(w, tr("Day"));
 
     connect(dailyTableView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &TabWidget::selectionChanged);
     connect(addFoodButton, &QAbstractButton::clicked, this, &TabWidget::showAddFoodDialog);
