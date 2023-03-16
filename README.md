@@ -45,5 +45,18 @@ Change #4: In consideration of the open-closed principle, an MealItem interface 
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+Testing was split into two parts, frontend and backend. For the backend, the Google Test framework was used and a test suite was written for each backend class. Every method is tested extensively and every method in the backend classes (excluding some setters and getters) is covered by at least one test case. Moreover, Valgrind/Memcheck was ran on both the backend terminal executable and test executable, ultimately, it was determined that both executable reaches Memcheck clean with no memory loss.
+
+As for the frontend, a checklist for frontend elements is created as to validate the frontend for the GUI application built with QT creator is functioning properly:
+
+- [x] User's target nutrition for the day should be shown clearly on the application window.
+- [x] User's current nutrition for the day should be shown clearly and updating everytime new food is logged.
+- [x] There is a button for the user to choose to add/remove food items.
+- [x] User should be given a clear indication as to whether their daily nutrition goal have been reached.
+- [x] For every food item logged, all the nutrition values (Calories, Carbohydrates, Protein, Fat) should be clearly listed.
+- [x] User should be able to easily see the name of the foods they entered.
+- [x] User should be able to log their food and enter relevant information through a form field.
+- [x] All buttons, fields, textboxes are labeled correctly.
+- [x] All frontend elements should be organized and spaced out correctly.
+- [x] There should be a visualization of the user's current progress with regards to their daily nutrition goal.
  
