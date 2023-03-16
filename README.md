@@ -44,7 +44,25 @@ Change #4: In consideration of the open-closed principle, an MealItem interface 
  ![Terminal Executable 1](https://i.imgur.com/6ma29oI.png)
  ![Terminal Executable 2](https://i.imgur.com/s0ib7az.png)
  ## Installation/Usage
- > Instructions on installing and running your application
+ QT GUI Application:
+ 
+ 1. install [QT Creator](https://www.qt.io/download)
+ 2. open QT Creator
+ 3. select create project
+ 4. select import project -> git clone -> Choose
+ 5. enter the repository link into the "Repository" field (https://github.com/cs100/final-project-surfin-and-mergin.git)
+ 6. type in master in the "Branch" field
+ 7. check recursive and click continue
+ 8. run program/application by clicking the button at the bottom left
+
+ Terminal GUI Application:
+ 
+ 1. Open terminal and cd into desired directory
+ 2. clone this repository by typing in ```git clone https://github.com/cs100/final-project-surfin-and-mergin.git```
+ 3. cd into that cloned, local repository
+ 4. type ```cmake .```
+ 5. type in ```make``` to compile executable
+ 6. type in ```./bin/main``` to run program executable
  ## Testing
 Testing was split into two parts, frontend and backend. For the backend, the Google Test framework was used and a test suite was written for each backend class. Every method is tested extensively and every method in the backend classes (excluding some setters and getters) is covered by at least one test case. Moreover, Valgrind/Memcheck was ran on both the backend terminal executable and test executable, ultimately, it was determined that both executable reaches Memcheck clean with no memory loss.
 
