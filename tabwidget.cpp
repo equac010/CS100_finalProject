@@ -13,13 +13,14 @@ TabWidget::TabWidget(QWidget *parent):
 {
     auto proxyModel = new DateFilterProxyModel(this);
     proxyModel->setSourceModel(table);
-    proxyModel->setFilterStartDate(QDate(QDate::currentDate()));
-    proxyModel->setFilterEndDate(QDate(QDate::currentDate()));
+    QDate date{QDate::currentDate()};
+    proxyModel->setFilterStartDate(QDate(date));
+    proxyModel->setFilterEndDate(date.addDays(1));
 
     //I'm setting up the tableView in this code rather than the ui file since I don't know otherwise how to reference it and set its properties
     auto dailyTableView = new QTableView();
 
-    dailyTableView->setModel(proxyModel);
+    dailyTableView->setModel(table);
     dailyTableView->setSelectionBehavior(QAbstractItemView::SelectRows);
     dailyTableView->horizontalHeader()->setStretchLastSection(true);
     dailyTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);

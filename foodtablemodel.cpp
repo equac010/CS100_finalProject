@@ -52,18 +52,18 @@ bool FoodTableModel::setHeaderData(int section, Qt::Orientation orientation, con
 
 int FoodTableModel::rowCount(const QModelIndex &parent) const
 {
-    if (parent.isValid()) {
-        return listOfFoods.size();
-    }
+    //if (parent.isValid()) {
+    return listOfFoods.size();
+    //}
 
     return 0;
 }
 
 int FoodTableModel::columnCount(const QModelIndex &parent) const
 {
-    if (parent.isValid()) {
+    //if (parent.isValid()) {
         return 7; // Name, Servings, Calories, Carbs, Fat, Protein, QDateTime
-    }
+    //}
     return 0;
 }
 
@@ -110,8 +110,8 @@ QVariant FoodTableModel::data(const QModelIndex &index, int role) const
 
 bool FoodTableModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    std::cout << "Row" << index.row() << std::endl;
-    std::cout << "Column" << index.column() << std::endl;
+    std::cout << "Row: " << index.row() << std::endl;
+    std::cout << "Column: " << index.column() << std::endl;
 
     if (index.isValid() && role == Qt::EditRole) {
         const int row = index.row();
