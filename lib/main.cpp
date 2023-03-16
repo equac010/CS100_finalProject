@@ -10,5 +10,6 @@
 
 int main(int argc, char* argv[]) { 
     DailyInfo d;
-
+    DailyInfoOutputter dOutput = DailyInfoOutputter(d);
+    dOutput.printInfo(std::cout);
 }
