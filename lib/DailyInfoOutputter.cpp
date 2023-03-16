@@ -1,5 +1,6 @@
 #include "../include/IOutputter.h"
 #include "../include/DailyInfo.h"
+#include "../include/DailyInfoOutputter.h"
 #include "../include/Nutrition.h"
 #include "../include/Food.h"
 #include "../include/Meal.h"
@@ -7,17 +8,6 @@
 #include <iterator>
 #include <iostream>
 #include <string>
-
-class DailyInfoOutputter: IOutputter{
-    private: 
-        DailyInfo dailyInfo;
-    public:
-        DailyInfoOutputter(DailyInfo& d): dailyInfo(d){}
-        void printInfo(std::ostream& out) const;
-        void printMeal(std::ostream& out, Meal& m) const;
-        void printFood(std::ostream& out, Food& f) const;
-        void printNutrition(std::ostream& out, Nutrition& n) const;
-};
 
 void DailyInfoOutputter::printInfo(std::ostream& out) const{
     Nutrition target = dailyInfo.getDailyTarget();
