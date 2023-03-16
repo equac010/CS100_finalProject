@@ -36,6 +36,8 @@ Change #4: In consideration of the open-closed principle, an MealItem interface 
 ## FINAL DELIVERABLES
  
  ## Screenshots
+ ![GUI 1](https://i.imgur.com/Y4eLvYm.png)
+ ![GUI 2](https://i.imgur.com/fS7VMbi.png)
  ![Terminal Executable 1](https://i.imgur.com/6ma29oI.png)
  ![Terminal Executable 2](https://i.imgur.com/s0ib7az.png)
  ## Installation/Usage
