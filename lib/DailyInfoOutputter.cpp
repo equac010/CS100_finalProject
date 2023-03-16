@@ -19,7 +19,7 @@ void DailyInfoOutputter::printInfo(std::ostream& out) const{
     std::vector<int> totalValues = {total.getCal(), total.getCarb(), total.getProtein(), total.getFat()};
     std::vector<std::string> nutritionNames = {"Calories", "Carb", "Protein","Fat"};
     std::vector<std::string> mealNames = {"Breakfast", "Lunch", "Dinner", "Snack"};
-    out << "-------------------------------------------------------------\n";
+    out << "\n\n-------------------------------------------------------------\n";
     out << "-------------------------------------------------------------\n\n";
 
     for(unsigned int i = 0; i < 4; i++){
@@ -42,7 +42,7 @@ void DailyInfoOutputter::printInfo(std::ostream& out) const{
     }
 
     out << "\n-------------------------------------------------------------\n";
-    out << "-------------------------------------------------------------";
+    out << "-------------------------------------------------------------\n\n";
 }
 void DailyInfoOutputter::printMeal(std::ostream& out, Meal& m) const{
    std::vector<Food>::const_iterator it;
