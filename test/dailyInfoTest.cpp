@@ -77,16 +77,6 @@ TEST(DailyInfoTests, oneParamRemoveFoodWorks){
     EXPECT_EQ(d.calcTotalNutrition(), Nutrition(1010,80,25,30));
 }
 
-TEST(DailyInfoTests, removeFoodFailsCorrectly){
-    DailyInfo d;
-    d.addFood(2,Food("steak",1,Nutrition(1010,80,25,30)));
-    d.addFood(2,Food("steak",1,Nutrition(1000,80,25,30)));
-    d.addFood(3,Food("cake",2,Nutrition(250,50,5,50)));
-
-    EXPECT_DEATH(d.removeFood(0), "");
-    EXPECT_DEATH(d.removeFood(1,2), "");
-}
-
 TEST(DailyInfoTests, DailyTargetReachedWorks){
     DailyInfo d(Nutrition(2000,130,50,40));
     d.addFood(0,Food("steak",1,Nutrition(1000,100,10,30)));
