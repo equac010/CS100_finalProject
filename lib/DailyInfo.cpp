@@ -14,16 +14,16 @@ DailyInfo::DailyInfo(Nutrition n){
    dailyTarget = n;
 }
 
-Nutrition DailyInfo::calcTotalNutrition(){
+Nutrition DailyInfo::calcTotalNutrition() const{
    Nutrition total;
-   std::vector<Meal>::iterator it;
+   std::vector<Meal>::const_iterator it;
    for(it = allMeals.begin(); it != allMeals.end(); it++){
       total = total + (*it).calcTotalNutrition();
    }
    return total;
 }
 
-std::vector<double> DailyInfo::getNutritionPercentages(){
+std::vector<double> DailyInfo::getNutritionPercentages() const{
    // order: calories, carb, protein, fat
    std::vector<double> percs;
    Nutrition totalNutrition = calcTotalNutrition();
@@ -36,7 +36,7 @@ std::vector<double> DailyInfo::getNutritionPercentages(){
    return percs;
 }
 
-bool DailyInfo::dailyTargetReached(){
+bool DailyInfo::dailyTargetReached() const{
    Nutrition total = calcTotalNutrition();
    return (total.getCal() >= dailyTarget.getCal() && 
            total.getCarb() >= dailyTarget.getCarb() &&
