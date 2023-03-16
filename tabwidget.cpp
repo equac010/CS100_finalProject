@@ -59,10 +59,10 @@ void TabWidget::showAddFoodDialog()
 void TabWidget::addFoodEntry(const QString &foodName, const double servings, const int calPerServing, const int proteinPerServing, const int carbPerServing, const int fatPerServing)
 {
     QList<QVariant> listOfParameters = {foodName, servings, calPerServing, proteinPerServing, carbPerServing, fatPerServing, QDateTime::currentDateTime()};
-    table->insertRows(0, 1, QModelIndex());
-    QModelIndex index = table->index(0,0, QModelIndex());
+    table->insertRows(0, 1);
+    QModelIndex index = table->index(0,0);
     for (int i = 0; i < 7; ++i) {
-        index = table->index(0, i, QModelIndex());
+        index = table->index(0, i);
         table->setData(index, listOfParameters[i], Qt::EditRole);
     }
 }

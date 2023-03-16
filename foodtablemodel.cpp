@@ -1,6 +1,7 @@
 #include "foodtablemodel.h"
 #include "food.h"
 #include <QDateTime>
+#include <iostream>
 
 FoodTableModel::FoodTableModel(QObject *parent)
     : QAbstractTableModel(parent)
@@ -109,6 +110,9 @@ QVariant FoodTableModel::data(const QModelIndex &index, int role) const
 
 bool FoodTableModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
+    std::cout << "Row" << index.row() << std::endl;
+    std::cout << "Column" << index.column() << std::endl;
+
     if (index.isValid() && role == Qt::EditRole) {
         const int row = index.row();
         auto foodDate = listOfFoods.value(row);
@@ -119,7 +123,7 @@ bool FoodTableModel::setData(const QModelIndex &index, const QVariant &value, in
             break;
 
         case 1:
-            foodDate.first.setServings(value.toInt());
+            foodDate.first.setServings(value.toDouble());
             break;
         case 2:
             foodDate.first.setCalPerServing(value.toInt());
