@@ -14,10 +14,16 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
     main.cpp
+    addfooddialog.h addfooddialog.cpp addfooddialog.ui
     inputform.cpp inputform.h inputform.ui
     mainwindow.cpp mainwindow.h mainwindow.ui
-    #adddialog.h adddialog.cpp adddialog.ui
+    foodtablemodel.h foodtablemodel.cpp
+    food.h food.cpp
+    tabwidget.h tabwidget.cpp
+    datefilterproxymodel.h datefilterproxymodel.cpp
 )
+
+include_directories (${PROJECT_SOURCE_DIR})
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(final-project-surfin-and-mergin
