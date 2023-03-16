@@ -20,7 +20,7 @@ void DailyInfoOutputter::printInfo(std::ostream& out) const{
     std::vector<std::string> nutritionNames = {"Calories", "Carb", "Protein","Fat"};
     std::vector<std::string> mealNames = {"Breakfast", "Lunch", "Dinner", "Snack"};
     out << "\n\n-------------------------------------------------------------\n";
-    out << "-------------------------------------------------------------\n\n";
+    out << "-------------------------------------------------------------\n";
 
     for(unsigned int i = 0; i < 4; i++){
         out << std::setw(10) << nutritionNames.at(i) << ": " << std::string(nutritionPercentages.at(i)*10, '*');
@@ -34,26 +34,26 @@ void DailyInfoOutputter::printInfo(std::ostream& out) const{
         out << "\nDaily Goal NOT ACHIEVED )):<\n";
     }
 
-    out << "\n-------------------------------------------------------------\n\n";
+    out << "\n";
 
     for(unsigned int i = 0; i < 4; i++){
         out << mealNames.at(i) << ":\n";
         printMeal(out, dailyInfo.getMeal().at(i));
     }
 
-    out << "\n-------------------------------------------------------------\n";
+    out << "-------------------------------------------------------------\n";
     out << "-------------------------------------------------------------\n\n";
 }
 void DailyInfoOutputter::printMeal(std::ostream& out, Meal& m) const{
-   std::vector<Food>::const_iterator it;
    std::vector<Food> allFoods = m.getAllFood();
-   for(it = allFoods.begin(); it != allFoods.end(); it++){
-      Food f = *it;
+   for(unsigned int i = 0; i < allFoods.size(); i++){
+      Food f = allFoods.at(i);
+      out << "    " << i+1 << ". ";
       printFood(out, f);
    }
 }
 void DailyInfoOutputter::printFood(std::ostream& out, Food& f) const{
-    out << "     (" << f.getServingsTaken() << ") " << f.getName() << ": ";
+    out << f.getName() << " (" << f.getServingsTaken() << ") : ";
     Nutrition n = f.calcTotalNutrition();
     printNutrition(out, n);
 }
