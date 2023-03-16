@@ -32,13 +32,8 @@ Change #2: In consideration of the dependency inversion principle, Food, Meal, a
 Change #3: In application of the dependency inversion principle, instead of implementing 3 different, separate classes responsible for saving and fetching user data, we know have FoodDataManager, MealDataManger, and DailyInfoDataManager all inheriting from an abstract DataManager class. This way, future changes to the 3 low-level, child classes will be less costly as the high-level classes that call them would not be affected by the changes.
 
 Change #4: In consideration of the open-closed principle, an MealItem interface is added, and the Food class inherits from it. Name is the only attribute of the interface. This change will make future additions of classes, such as Beverage, to be less costly because no changes would have to be made to the Meal class and other potential classes that could currently depend on the Food class.
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
+
+## FINAL DELIVERABLES
  
  ## Screenshots
  ![Terminal Executable 1](https://i.imgur.com/6ma29oI.png)
