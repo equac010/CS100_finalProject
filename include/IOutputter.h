@@ -1,8 +1,8 @@
-#ifndef OUTPUTTER_H
-#define OUTPUTTER_H
+#ifndef IOUTPUTTER_H
+#define IOUTPUTTER_H
 #include <iostream>
 
-class Outputter{
+class IOutputter{
     public:
         virtual void printInfo(std::ostream& out) const = 0;
 };
